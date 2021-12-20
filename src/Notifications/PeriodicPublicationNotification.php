@@ -4,13 +4,12 @@ namespace PeriodicNotice\Notifications;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 use Illuminate\Support\Collection;
 
 class PeriodicPublicationNotification extends Notification implements ShouldQueue
 {
-    use Queueable, HasPeriodicalNotificationMail;
+    use Queueable;
     use HasDynamicChannels {
         HasDynamicChannels::via as dynamicVia;
     }
@@ -29,53 +28,20 @@ class PeriodicPublicationNotification extends Notification implements ShouldQueu
         return [];
     }
 
+    protected function mailMessageBuilder($notifiable): MailMessageBuilder
+    {
+        $className = config('periodic-notice.defaults.mail_builder', MailMessageBuilder::class);
+        if (!is_a($className, MailMessageBuilder::class, true)) {
+            throw new \Exception('Wrong mail builder class');
+        }
+
+        return $className::make();
+    }
+
     public function toMail($notifiable)
     {
-        $message = (new MailMessage);
-
-        if (method_exists($this, 'mailSubject')
-            && ($value = $this->mailSubject())) {
-            $message->subject($value);
-        }
-
-        if (method_exists($this, 'mailGreeting')
-            && ($value = $this->mailGreeting())) {
-            $message->greeting($value);
-        }
-
-        if (method_exists($this, 'mailSalutation')
-            && ($value = $this->mailSalutation())) {
-            $message->salutation($value);
-        }
-
-        if (method_exists($this, 'mailContentBeforeList')) {
-            $this->mailContentBeforeList($message);
-        }
-
-        $itemsCount = $this->entities->count();
-        $counter    = 0;
-        /** @var \PeriodicNotice\Contracts\SendableEntity $entity */
-        foreach ($this->entities as $entity) {
-            $counter++;
-
-            if (method_exists($this, 'mailContentBeforeListItem')) {
-                $this->mailContentBeforeListItem($message);
-            }
-            $message->line("[{$entity->notificationEntityTitle()}]({$entity->notificationEntityWebUrl()})");
-            $message->line($entity->notificationEntityDescription());
-            if (method_exists($this, 'mailContentListItemSeparator')
-            && $counter < $itemsCount) {
-                $this->mailContentListItemSeparator($message);
-            }
-            if (method_exists($this, 'mailContentAfterListItem')) {
-                $this->mailContentAfterListItem($message);
-            }
-        }
-
-        if (method_exists($this, 'mailContentAfterList')) {
-            $this->mailContentAfterList($message);
-        }
-
-        return $message;
+        return $this->mailMessageBuilder($notifiable)
+                    ->useEntries($this->entities)
+                    ->build();
     }
 }
