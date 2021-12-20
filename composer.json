@@ -1,6 +1,6 @@
 {
     "name": "yaroslawww/laravel-periodic-notice",
-    "description": "Send your periodical series as batch using notifications.",
+    "description": "Send your periodical series to user as batch using notifications.",
     "keywords": [
         "laravel",
         "series",
