@@ -1,12 +1,15 @@
-# Laravel Forms Entries
+# Laravel periodic notifications batch
 
 [![Packagist License](https://img.shields.io/packagist/l/yaroslawww/laravel-periodic-notice?color=%234dc71f)](https://github.com/yaroslawww/laravel-periodic-notice/blob/master/LICENSE.md)
 [![Packagist Version](https://img.shields.io/packagist/v/yaroslawww/laravel-periodic-notice)](https://packagist.org/packages/yaroslawww/laravel-periodic-notice)
+[![Total Downloads](https://img.shields.io/packagist/dt/yaroslawww/laravel-periodic-notice)](https://packagist.org/packages/yaroslawww/laravel-periodic-notice)
 [![Build Status](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/badges/build.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/build-status/master)
 [![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/?branch=master)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/?branch=master)
 
 Send your periodical series to user as batch using notifications.
+
+![](./docs/assets/new-posts.png)
 
 ## Installation
 
