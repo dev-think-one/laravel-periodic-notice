@@ -12,7 +12,6 @@ use Symfony\Component\Console\Exception\RuntimeException;
 
 class SendPeriodicalNotificationsBatchCommandTest extends TestCase
 {
-
     /** @test */
     public function has_required_arguments()
     {

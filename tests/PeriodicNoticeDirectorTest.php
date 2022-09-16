@@ -11,7 +11,6 @@ use PeriodicNotice\Tests\Fixtures\Models\User;
 
 class PeriodicNoticeDirectorTest extends TestCase
 {
-
     /** @test */
     public function use_query_to_get_entries_as_callback()
     {

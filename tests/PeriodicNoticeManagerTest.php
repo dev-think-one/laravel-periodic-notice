@@ -6,7 +6,6 @@ use PeriodicNotice\PeriodicNoticeManager;
 
 class PeriodicNoticeManagerTest extends TestCase
 {
-
     /** @test */
     public function possible_to_ignore_migration()
     {

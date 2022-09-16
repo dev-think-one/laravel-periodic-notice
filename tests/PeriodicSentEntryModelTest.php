@@ -8,7 +8,6 @@ use PeriodicNotice\Tests\Fixtures\Models\User;
 
 class PeriodicSentEntryModelTest extends TestCase
 {
-
     /** @test */
     public function model_has_table_name_from_config()
     {
