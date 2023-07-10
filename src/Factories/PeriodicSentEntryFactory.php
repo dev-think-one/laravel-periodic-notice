@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Database\Eloquent\Model;
 use PeriodicNotice\Models\PeriodicSentEntry;
 
+/**
+ * @extends Factory<PeriodicSentEntry>
+ */
 class PeriodicSentEntryFactory extends Factory
 {
     /**

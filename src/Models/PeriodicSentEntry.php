@@ -21,7 +21,7 @@ class PeriodicSentEntry extends Model
         'meta' => \JsonFieldCast\Casts\SimpleJsonField::class,
     ];
 
-    public function getTable()
+    public function getTable(): string
     {
         return config('periodic-notice.tables.periodic_sent_entries');
     }
