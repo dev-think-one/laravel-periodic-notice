@@ -28,13 +28,13 @@ php artisan vendor:publish --provider="PeriodicNotice\ServiceProvider" --tag="la
 
 To disable default migrations add this code to app service provider:
 
-```injectablephp
+```php
 \PeriodicNotice\PeriodicNoticeManager::ignoreMigrations()
 ```
 
 ## Usage
 
-```injectablephp
+```php
 use PeriodicNotice\Concerns\HasPeriodicNotice;
 use PeriodicNotice\Contracts\NotificationReceiver;
 use PeriodicNotice\PeriodicNoticeDirector;
@@ -64,7 +64,7 @@ class User extends \Illuminate\Foundation\Auth\User implements NotificationRecei
 }
 ```
 
-```injectablephp
+```php
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use PeriodicNotice\Concerns\InPeriodicNotice;
@@ -94,7 +94,7 @@ php artisan periodic-notice:send:batch every_day user -G custom_group
 
 More appropriate way is using cron schedule
 
-```injectablephp
+```php
 $schedule->command('periodic-notice:send:batch every_day user')
           ->dailyAt('18:00');
 ```
