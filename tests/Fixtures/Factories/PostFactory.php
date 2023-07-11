@@ -5,6 +5,9 @@ namespace PeriodicNotice\Tests\Fixtures\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use PeriodicNotice\Tests\Fixtures\Models\Post;
 
+/**
+ * @extends Factory<Post>
+ */
 class PostFactory extends Factory
 {
     /**

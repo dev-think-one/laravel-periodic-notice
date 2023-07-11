@@ -1,11 +1,11 @@
 # Laravel periodic notifications batch
 
-[![Packagist License](https://img.shields.io/packagist/l/yaroslawww/laravel-periodic-notice?color=%234dc71f)](https://github.com/yaroslawww/laravel-periodic-notice/blob/main/LICENSE.md)
-[![Packagist Version](https://img.shields.io/packagist/v/yaroslawww/laravel-periodic-notice)](https://packagist.org/packages/yaroslawww/laravel-periodic-notice)
-[![Total Downloads](https://img.shields.io/packagist/dt/yaroslawww/laravel-periodic-notice)](https://packagist.org/packages/yaroslawww/laravel-periodic-notice)
-[![Build Status](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/badges/build.png?b=main)](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/build-status/main)
-[![Code Coverage](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/?branch=main)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/yaroslawww/laravel-periodic-notice/?branch=main)
+![Packagist License](https://img.shields.io/packagist/l/think.studio/laravel-periodic-notice?color=%234dc71f)
+[![Packagist Version](https://img.shields.io/packagist/v/think.studio/laravel-periodic-notice)](https://packagist.org/packages/think.studio/laravel-periodic-notice)
+[![Total Downloads](https://img.shields.io/packagist/dt/think.studio/laravel-periodic-notice)](https://packagist.org/packages/think.studio/laravel-periodic-notice)
+[![Build Status](https://scrutinizer-ci.com/g/dev-think-one/laravel-periodic-notice/badges/build.png?b=main)](https://scrutinizer-ci.com/g/dev-think-one/laravel-periodic-notice/build-status/main)
+[![Code Coverage](https://scrutinizer-ci.com/g/dev-think-one/laravel-periodic-notice/badges/coverage.png?b=main)](https://scrutinizer-ci.com/g/dev-think-one/laravel-periodic-notice/?branch=main)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/dev-think-one/laravel-periodic-notice/badges/quality-score.png?b=main)](https://scrutinizer-ci.com/g/dev-think-one/laravel-periodic-notice/?branch=main)
 
 Send your periodical series to user as batch using notifications.
 
@@ -16,7 +16,7 @@ Send your periodical series to user as batch using notifications.
 Install the package via composer:
 
 ```bash
-composer require yaroslawww/laravel-periodic-notice
+composer require think.studio/laravel-periodic-notice
 ```
 
 You can publish the assets file with:

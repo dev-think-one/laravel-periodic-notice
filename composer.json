@@ -1,17 +1,17 @@
 {
-    "name": "yaroslawww/laravel-periodic-notice",
+    "name": "think.studio/laravel-periodic-notice",
     "description": "Send your periodical series to user as batch using notifications.",
     "keywords": [
         "laravel",
         "series",
         "notification"
     ],
-    "homepage": "https://github.com/yaroslawww/laravel-periodic-notice",
+    "homepage": "https://github.com/dev-think-one/laravel-periodic-notice",
     "license": "MIT",
     "authors": [
         {
             "name": "Yaroslav Georgitsa",
-            "email": "yaroslav.georgitsa@gmail.com",
+            "email": "yg@think.studio",
             "homepage": "https://github.com/yaroslawww",
             "role": "Developer"
         }
